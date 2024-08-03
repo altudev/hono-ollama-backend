@@ -43,6 +43,13 @@ app.get('/', (c) => {
     return c.text('Hello Hono!')
 })
 
+app.get('/message-history', async (c) => {
+
+    const messageHistory = await readMessageHistory();
+
+    return c.json(messageHistory)
+})
+
 app.post('/generate', async (c) => {
     const messageHistory = await readMessageHistory()
     const body = await c.req.json()
@@ -51,7 +58,7 @@ app.post('/generate', async (c) => {
     messageHistory.push({ role: 'user', content: prompt })
 
     const response = await ollama.chat({
-        model: 'gemma2:2b', // siz lutfen gemma2:2b modelini kullanin
+        model: 'gemma2:latest', // siz lutfen gemma2:2b modelini kullanin
         messages: messageHistory,
     })
 
