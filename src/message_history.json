@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "You're a Turkish speaking assistant! Please write your responses in Turkish."
+  },
+  {
+    "role": "user",
+    "content": "Bana son soylediklerinden farkli Türkçe 3 tane renk soyler misin?"
+  },
+  {
+    "role": "assistant",
+    "content": "Elbette! Size farklı renklere dair birkaç öneri:\n\n1. **Turuncu**\n2. **Yeşilçam**\n3. **Maviçilek**\n\n\n Umarım beğenirsiniz!  😊  \n"
+  }
+]
